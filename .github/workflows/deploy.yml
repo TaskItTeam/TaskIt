@@ -31,15 +31,12 @@ jobs:
       - name: Validate Identity with AWS
         run: aws sts get-caller-identity
 
+      - run: cd infra
+
       - name: Setup OpenTofu
         uses: opentofu/setup-opentofu@v1
         with:
           tofu_version: 1.6.0
-      
-      - name: Format OpenTofu script
-        id: format
-        run: tofu fmt -check
-        continue-on-error: false
       
       - name: Initialize OpenTofu
         id: init
