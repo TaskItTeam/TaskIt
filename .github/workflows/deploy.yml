@@ -16,7 +16,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: .
+        working-directory: infra
     steps:
       - name: Clone repository
         uses: actions/checkout@v3
@@ -30,8 +30,6 @@ jobs:
 
       - name: Validate Identity with AWS
         run: aws sts get-caller-identity
-
-      - run: cd infra
 
       - name: Setup OpenTofu
         uses: opentofu/setup-opentofu@v1
