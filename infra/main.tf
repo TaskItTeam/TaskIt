@@ -2,7 +2,7 @@ terraform {
   required_providers {
     aws = {
       source = "opentofu/aws"
-      version = "~> 5.16"
+      version = "~> 5.36"
     }
   }
 
@@ -19,8 +19,8 @@ resource "aws_db_instance" "taskit_db" {
   engine_version = "15.2"
   identifier = "taskit-db"
   instance_class = "db.t3.micro"
-  username = var.username
-  password = var.password
+  username = var.DB_USERNAME
+  password = var.DB_PASSWORD
   publicly_accessible = true
   skip_final_snapshot = true
 }

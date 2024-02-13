@@ -7,13 +7,12 @@ permissions:
   contents: read
   pull-requests: write
 
-env:
-  TF_VAR_DB_USERNAME: ${{ secrets.DB_USERNAME }}
-  TF_VAR_DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-
 jobs:
   infra:
     runs-on: ubuntu-latest
+    env:
+      TF_VAR_DB_USERNAME: ${{ secrets.DB_USERNAME }}
+      TF_VAR_DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
     defaults:
       run:
         shell: bash

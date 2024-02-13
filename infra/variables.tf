@@ -1,10 +1,10 @@
-variable "username" {
+variable "DB_USERNAME" {
   description = "Database username"
   type = string
   sensitive = true
 }
 
-variable "password" {
+variable "DB_PASSWORD" {
   description = "Database password"
   type = string
   sensitive = true
