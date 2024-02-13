@@ -1,0 +1,49 @@
+name: "Deploy database"
+
+on: [pull_request, workflow_dispatch]
+
+permissions:
+  id-token: write
+  contents: read
+  pull-requests: write
+
+jobs:
+  infra:
+    runs-on: ubuntu-latest
+    env:
+      TF_VAR_DB_USERNAME: ${{ secrets.DB_USERNAME }}
+      TF_VAR_DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+    defaults:
+      run:
+        shell: bash
+        working-directory: infra
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v3
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1.7.0
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE }}
+          role-session-name: GITHUB_ACTION_RDS
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Validate Identity with AWS
+        run: aws sts get-caller-identity
+
+      - name: Setup OpenTofu
+        uses: opentofu/setup-opentofu@v1
+        with:
+          tofu_version: 1.6.0
+      
+      - name: Initialize OpenTofu
+        id: init
+        run: tofu init
+      
+      - name: Generate infrastructure plan
+        id: plan
+        run: tofu plan -out=.tfplan
+      
+      - name: Apply infrastructure plan
+        id: apply
+        run: tofu apply .tfplan
