@@ -1,0 +1,22 @@
+name: migrate database
+on: 
+    push:
+        branches: 
+            - main
+jobs:
+    migrate: 
+        runs-on: ubuntu-latest
+        defaults: 
+            run:
+                shell: bash
+                working-directory: ./
+        steps:
+            - name: flyway migration
+              run: 
+                wget -qO- https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/7.10.0/flyway-commandline-7.10.0-linux-x64.tar.gz | 
+                tar xvz ./flyway -url jdbc:postgresql://<AWS_RDS_ENDPOINT>:<PORT>/<DB_NAME> -user=<DB_USERNAME> -password=<DB_PASSWORD> migrate
+              env: 
+                AWS_RDS_ENDPOINT: ${{ secrets.AWS_RDS_ENDPOINT }}
+                DB_NAME: ${{ secrets.DB_NAME }}
+                DB_USERNAME: ${{ secrets.DB_USERNAME }}
+                DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
