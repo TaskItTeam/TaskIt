@@ -9,7 +9,7 @@ jobs:
         defaults: 
             run:
                 shell: bash
-                working-directory: ./
+                working-directory: .
         steps:
             - name: flyway migration
               run: 
