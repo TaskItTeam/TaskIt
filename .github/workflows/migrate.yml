@@ -20,4 +20,4 @@ jobs:
             
             - name: flyway migrations
               run: |
-                flyway -url=jdbc:postgresql://${{ secrets.AWS_RDS_ENDPOINT}}:${{ secrets.PORT }}/${{ secrets.DB_NAME }} -user=${{ secrets.DB_USERNAME }} -password=${{ secrets.DB_PASSWORD }} -locations=filesystem:$(pwd)/db/** migrate
+                flyway -url=jdbc:postgresql://${{ secrets.AWS_RDS_ENDPOINT }}:${{ secrets.DB_PORT }}/${{ secrets.DB_NAME }} -user=${{ secrets.DB_USERNAME }} -password=${{ secrets.DB_PASSWORD }} -locations=filesystem:$(pwd)/db/** migrate
