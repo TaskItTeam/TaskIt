@@ -18,6 +18,6 @@ jobs:
               run : |
                 wget -qO- https://download.red-gate.com/maven/release/com/redgate/flyway/flyway-commandline/10.7.2/flyway-commandline-10.7.2-linux-x64.tar.gz | tar -xvz && sudo ln -s `pwd`/flyway-10.7.2/flyway /usr/local/bin
             
-            - name: flyway migration
+            - name: flyway migrations
               run: |
-                flyway -url=jdbc:postgresql://${{ secrets.AWS_RDS_ENDPOINT}}:${{ secrets.PORT }}/${{ secrets.DB_NAME }} -user=${{ secrets.DB_USERNAME }} -password=${{ secrets.DB_PASSWORD }} -locations=filesystem:$(pwd)/db/migrations migrate
+                flyway -url=jdbc:postgresql://${{ secrets.AWS_RDS_ENDPOINT}}:${{ secrets.PORT }}/${{ secrets.DB_NAME }} -user=${{ secrets.DB_USERNAME }} -password=${{ secrets.DB_PASSWORD }} -locations=filesystem:$(pwd)/db/** migrate
