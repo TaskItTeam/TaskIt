@@ -21,9 +21,3 @@ jobs:
             - name: flyway migration
               run: |
                 flyway -url=jdbc:postgresql://${{ secrets.AWS_RDS_ENDPOINT}}:${{ secrets.PORT }}/${{ secrets.DB_NAME }} -user=${{ secrets.DB_USERNAME }} -password=${{ secrets.DB_PASSWORD }} -locations=filesystem:$(pwd)/db/migrations migrate
-              env: 
-                AWS_RDS_ENDPOINT: ${{ secrets.AWS_RDS_ENDPOINT }}
-                PORT: ${{ secrets.PORT }}
-                DB_NAME: ${{ secrets.DB_NAME }}
-                DB_USERNAME: ${{ secrets.DB_USERNAME }}
-                DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
