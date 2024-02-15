@@ -1,0 +1,22 @@
+INSERT INTO task_it.workers (first_name, last_name, email, phone_number, city, identification_number)
+VALUES
+    ('Scarface', 'Lafford', 'ScarfaceLafford@gmail.com', '0834787522', 'Durban', '9505215488659'),
+    ('Tome', 'Keasley', 'TomeKeasley@gmail.com', '0865984785', 'Port Elizabeth', '9810205653211'),
+    ('Rose', 'Dennerley', 'RoseDennerley@gmail.com', '0865481245', 'Nelspruit', '9904225657381'),
+    ('Lief', 'Bloxland', 'LiefBloxland@gmail.com', '0825241478', 'Cape Town', '0005125214545'),
+    ('Christian', 'Canadine', 'ChristianCanadine@gmail.com', '0835252857', 'Johannesburg', '9810255689457'),
+    ('Maynord', 'Stoller', 'MaynordStoller@gmail.com', '0864578451', 'Port Elizabeth', '9507010524878'),
+    ('Madlen', 'Smidmore', 'MadlenSmidmore@gmail.com', '0865984785', 'East London', '9810205653211'),
+    ('Dorella', 'Eamer', 'DorellaEamer@gmail.com', '0865984785', 'East London', '9810205653211'),
+    ('Teddi', 'Glanvill', 'TeddiGlanvill@gmail.com', '0865984785', 'Port Elizabeth', '9810205653211'),
+    ('Randal', 'Dewbury', 'RandalDewbury@gmail.com', '0865984785', 'Pretoria', '9810205653211'),
+    ('Corella', 'Abramamov', 'CorellaAbramamov@gmail.com', '0865984785', 'Mbombela', '9810205653211'),
+    ('Ottilie', 'Alsina', 'OttilieAlsina@gmail.com', '0865984785', 'Vereeniging', '9810205653211'),
+    ('Hendrick', 'Marron', 'HendrickMarron@gmail.com', '0865984785', 'Pietermaritzburg', '9810205653211'),
+    ('Ainslie', 'Wolfendell', 'AinslieWolfendell@gmail.com', '0865984785', 'Cape Town', '9810205653211'),
+    ('Diane', 'Doxey', 'DianeDoxey@gmail.com', '0865984785', 'Pretoria', '9810205653211'),
+    ('Sibyl', 'McCreery', 'SibylMcCreery@gmail.com', '0865984785', 'East London', '9810205653211'),
+    ('Aymer', 'Handke', 'AymerHandke@gmail.com', '0865984785', 'Nelspruit', '9810205653211'),
+    ('Hamlen', 'Cock', 'HamlenCock@gmail.com', '0865984785', 'Pietermaritzburg', '9810205653211'),
+    ('Jerrold', 'Dzenisenka', 'JerroldDzenisenka@gmail.com', '0865984785', 'George', '9810205653211'),
+    ('Yankee', 'Pena', 'YankeePena@gmail.com', '0865984785', 'Durban', '9810205653211');
