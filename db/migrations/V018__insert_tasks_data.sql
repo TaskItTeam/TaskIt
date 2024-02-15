@@ -1,4 +1,4 @@
-INSERT INTO task_it.tasks (name, description, duration)
+INSERT INTO task_it.tasks (name, description, duration_minute)
 VALUES
 	('Clean bedroom', 'Make your bed, vacuum your floor etc.', '30'),
 	('Clean bathroom', 'Clean your toilet, mirrors, shower/bath, floor etc.', '30'),
