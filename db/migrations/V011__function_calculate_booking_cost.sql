@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION calculate_booking_price(booking_id_param INTEGER)
+CREATE OR REPLACE FUNCTION task_it.calculate_booking_price(booking_id_param INTEGER)
 RETURNS NUMERIC AS $$
 DECLARE
     total_price NUMERIC := 0;

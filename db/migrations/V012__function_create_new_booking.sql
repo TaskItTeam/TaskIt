@@ -1,4 +1,4 @@
-CREATE OR REPLACE PROCEDURE create_new_booking(
+CREATE OR REPLACE PROCEDURE task_it.create_new_booking(
     customer_id integer, 
     address_id int, 
     status_id int, 
