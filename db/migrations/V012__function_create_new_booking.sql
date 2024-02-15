@@ -1,4 +1,3 @@
-[21:19] Devon Yeung
 CREATE OR REPLACE PROCEDURE task_it.create_new_booking(IN customer_id integer, IN address_id integer, IN status_id integer, IN booking_date timestamp without time zone, IN tasks_ids integer[])
 LANGUAGE plpgsql
 AS $procedure$
