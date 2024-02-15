@@ -4,9 +4,9 @@ LANGUAGE plpgsql
 AS $$
 BEGIN
     RETURN QUERY
-    SELECT Tasks.task_id, Tasks.name, Prices.cost
-    FROM Tasks
-    INNER JOIN Prices ON Tasks.task_id = Prices.task_id
-    WHERE Tasks.task_id = task_id_param ;
+    SELECT t.task_id, t.name, p.cost
+    FROM task_it.tasks t
+    INNER JOIN task_it.Prices p ON t.task_id = p.task_id
+    WHERE t.task_id = task_id_param ;
 END;
 $$
