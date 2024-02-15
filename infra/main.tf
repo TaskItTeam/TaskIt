@@ -25,6 +25,6 @@ resource "aws_db_instance" "taskit_db" {
   skip_final_snapshot = true
 
   tags {
-    owner = rudolphe@bbd.co.za
+    owner = "rudolphe@bbd.co.za"
   }
 }
