@@ -23,4 +23,8 @@ resource "aws_db_instance" "taskit_db" {
   password = var.DB_PASSWORD
   publicly_accessible = true
   skip_final_snapshot = true
+
+  tags {
+    owner = rudolphe@bbd.co.za
+  }
 }
