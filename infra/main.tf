@@ -24,7 +24,7 @@ resource "aws_db_instance" "taskit_db" {
   publicly_accessible = true
   skip_final_snapshot = true
 
-  tags {
+  tags = {
     owner = "rudolphe@bbd.co.za"
   }
 }
