@@ -11,12 +11,19 @@ jobs:
                 shell: bash
                 working-directory: .
         steps:
+            - name: repo setup
+              uses: actions/checkout@v3
+              
+            - name: flyway setup
+              run : |
+                wget -qO- https://download.red-gate.com/maven/release/com/redgate/flyway/flyway-commandline/10.7.2/flyway-commandline-10.7.2-linux-x64.tar.gz | tar -xvz && sudo ln -s `pwd`/flyway-10.7.2/flyway /usr/local/bin
+            
             - name: flyway migration
-              run: 
-                wget -qO- https://repo1.maven.org/maven2/org/flywaydb/flyway-commandline/7.10.0/flyway-commandline-7.10.0-linux-x64.tar.gz | 
-                tar xvz ./flyway -url jdbc:postgresql://<AWS_RDS_ENDPOINT>:<PORT>/<DB_NAME> -user=<DB_USERNAME> -password=<DB_PASSWORD> migrate
+              run: |
+                flyway -url=jdbc:postgresql://${{ secrets.AWS_RDS_ENDPOINT}}:${{ secrets.PORT }}/${{ secrets.DB_NAME }} -user=${{ secrets.DB_USERNAME }} -password=${{ secrets.DB_PASSWORD }} -locations=filesystem:$(pwd)/db/migrations migrate
               env: 
                 AWS_RDS_ENDPOINT: ${{ secrets.AWS_RDS_ENDPOINT }}
+                PORT: ${{ secrets.PORT }}
                 DB_NAME: ${{ secrets.DB_NAME }}
                 DB_USERNAME: ${{ secrets.DB_USERNAME }}
                 DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
