@@ -1,0 +1,23 @@
+name: migrate database
+on: 
+    push:
+        branches: 
+            - main
+jobs:
+    migrate: 
+        runs-on: ubuntu-latest
+        defaults: 
+            run:
+                shell: bash
+                working-directory: .
+        steps:
+            - name: repo setup
+              uses: actions/checkout@v3
+              
+            - name: flyway setup
+              run : |
+                wget -qO- https://download.red-gate.com/maven/release/com/redgate/flyway/flyway-commandline/10.7.2/flyway-commandline-10.7.2-linux-x64.tar.gz | tar -xvz && sudo ln -s `pwd`/flyway-10.7.2/flyway /usr/local/bin
+            
+            - name: flyway migration
+              run: |
+                flyway -url=jdbc:postgresql://${{ secrets.AWS_RDS_ENDPOINT}}:${{ secrets.PORT }}/${{ secrets.DB_NAME }} -user=${{ secrets.DB_USERNAME }} -password=${{ secrets.DB_PASSWORD }} -locations=filesystem:$(pwd)/db/migrations migrate
