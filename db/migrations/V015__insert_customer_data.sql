@@ -1,0 +1,22 @@
+INSERT INTO task_it.customers (first_name, last_name, email, phone_number)
+VALUES
+    ('Nathanial', 'Keling', 'nkeling0@gmail.com', '+27 39 646 6757'),
+    ('Arlena', 'Rowntree', 'arowntree1@gmailcom', '+27 89 058 9893'),
+    ('Killian', 'Farnell', 'kfarnell2@gmail.com', '+27 74 763 1378'),
+    ('Derby', 'Ransley', 'dransley3@gmail.com', '+27 38 369 3338'),
+    ('Barny', 'Hannibal', 'bhannibal4@gmail.com', '+27 21 829 3092'),
+    ('Devinne', 'Larkworthy', 'dlarkworthy5@gmail.com', '+27 04 891 4885'),
+    ('Bernadene', 'De Mitris', 'bdemitris6@gmail.com', '+27 00 860 8695'),
+    ('Ariel', 'Crisp', 'acrisp7@gmail.com', '+27 16 208 2935'),
+    ('Iorgo', 'Priestley', 'ipriestley8@gmail.com', '+27 07 853 1258'),
+    ('Lucia', 'Flecknell', 'lflecknell9@gmail.com', '+27 56 033 1721'),
+    ('Tome', 'Crawforth', 'tcrawfortha@gmail.com', '+27 54 110 3538'),
+    ('Mahmud', 'Lockitt', 'mlockittb@gmail.com', '+27 47 242 9576'),
+    ('Cello', 'Maybury', 'cmayburyc@gmail.net', '+27 72 750 6916'),
+    ('Hedwiga', 'Sandels', 'hsandelsd@gmail.com', '+27 69 105 6777'),
+    ('Elsi', 'Sasser', 'esassere@gmail.com', '+27 76 419 9947'),
+    ('Row', 'Arkin', 'rarkinf@gmail.com', '+27 10 327 2490'),
+    ('Kelci', 'Meysham', 'kmeyshamg@gmail.com', '+27 41 331 6004'),
+    ('Casandra', 'Canham', 'ccanhamh@gmail.com', '+27 24 396 3526'),
+    ('Kati', 'McNeely', 'kmcneelyi@gmail.com', '+27 65 137 9711'),
+    ('Nichols', 'Emburey', 'nemburey2r@gmail.com', '+27 51 064 9746');
