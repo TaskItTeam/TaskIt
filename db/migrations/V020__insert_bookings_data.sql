@@ -1,4 +1,4 @@
-INSERT INTO task_it.bookings (customer_id, address_id, status_id, booking_date, duration, cost)
+INSERT INTO task_it.bookings (customer_id, address_id, status_id, booking_date)
 VALUES
 	(1, 1, 1, '2024-01-19 10:30:00'),
 	(2, 2, 2, '2024-02-05 11:00:00'),
