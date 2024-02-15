@@ -21,6 +21,7 @@ provider "aws" {
 
 resource "aws_db_instance" "taskit_db" {
   allocated_storage = 5
+  db_name = var.DB_NAME
   engine = "postgres"
   engine_version = "15.2"
   identifier = "taskit-db"
