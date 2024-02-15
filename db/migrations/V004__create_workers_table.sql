@@ -5,5 +5,5 @@ CREATE TABLE IF NOT EXISTS task_it.workers (
     email TEXT NOT NULL UNIQUE,
     phone_number TEXT NOT NULL,
     city TEXT NOT NULL,
-    identification_number TEXT,
+    identification_number TEXT
 );
