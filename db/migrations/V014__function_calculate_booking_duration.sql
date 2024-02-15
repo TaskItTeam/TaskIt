@@ -4,7 +4,7 @@ $$
 DECLARE
     total_duration NUMERIC := 0;
 BEGIN
-    SELECT SUM(t.duration) INTO total_duration FROM task_it.tasks t
+    SELECT SUM(t.duration_minute) INTO total_duration FROM task_it.tasks t
     JOIN task_it.booking_tasks bt
         ON t.task_id = bt.task_id
         WHERE bt.booking_id = booking_id_param;
