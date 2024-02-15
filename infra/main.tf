@@ -7,10 +7,16 @@ terraform {
   }
 
   required_version = ">= 1.2.0"
+
+  backend "s3" {
+    bucket = var.BUCKET_NAME
+    key = var.BUCKET_KEY
+    region = var.AWS_REGION
+  }
 }
 
 provider "aws" {
-  region = "eu-west-1"
+  region = var.AWS_REGION
 }
 
 resource "aws_db_instance" "taskit_db" {
