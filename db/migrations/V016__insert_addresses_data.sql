@@ -1,0 +1,22 @@
+INSERT INTO task_it.addresses (street_address, city, province, postal_code)
+VALUES
+    ('5274 Brentwood Park', 'Cape Town', 'Western Cape', '8420'),
+    ('873 Dunning Road', 'Rustenburg', 'North West', '5980'),
+    ('89032 Beilfuss Drive', 'Vereeniging', 'Gauteng', '1484'),
+    ('2 Nova Hill', 'Nelspruit', 'Mpumalanga', '2329'),
+    ('0 Golf View Parkway', 'Polokwane', 'Limpopo', '1726'),
+    ('980 Reindahl Terrace', 'Pretoria', 'Gauteng', '6234'),
+    ('2529 Elmside Point', 'Cape Town', 'Western Cape', '9890'),
+    ('13241 Tony Trail', 'Rustenburg', 'North West', '4438'),
+    ('50 Prentice Hill', 'Rustenburg', 'North West', '8705'),
+    ('0 Browning Pass', 'Durban', 'KwaZulu-Natal', '6491'),
+    ('021 Park Meadow Point', 'Port Elizabeth', 'Eastern Cape', '5044'),
+    ('38 Melvin Alley', 'Mbombela', 'Mpumalanga', '5028'),
+    ('941 Kennedy Point', 'Vereeniging', 'Gauteng', '0799'),
+    ('82953 Butternut Place', 'George', 'Western Cape', '5466'),
+    ('6205 Florence Parkway', 'Cape Town', 'Western Cape', '2006'),
+    ('25 Express Point', 'Polokwane', 'Limpopo', '4295'),
+    ('0183 Roth Park', 'Port Elizabeth', 'Eastern Cape', '5645'),
+    ('955 Karstens Pass', 'Pretoria', 'Gauteng', '8240'),
+    ('161 Riverside Drive', 'Cape Town', 'Western Cape', '1836'),
+    ('25 Summer Ridge Hill', 'Pretoria', 'Gauteng', '5910');
