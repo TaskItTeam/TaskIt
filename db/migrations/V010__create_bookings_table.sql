@@ -4,8 +4,6 @@ CREATE TABLE IF NOT EXISTS task_it.bookings (
     address_id INTEGER NOT NULL,
     status_id INTEGER NOT NULL,
     booking_date TIMESTAMP NOT NULL,
-    duration NUMERIC NOT NULL,
-    cost NUMERIC NOT NULL,
     CONSTRAINT fk_customers_bookings
         FOREIGN KEY(customer_id)
             REFERENCES task_it.customers(customer_id),
