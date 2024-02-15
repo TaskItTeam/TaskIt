@@ -7,6 +7,12 @@ terraform {
   }
 
   required_version = ">= 1.2.0"
+
+  backend "s3" {
+    bucket = "taskit-bucket-i"
+    key = "infra/states"
+    region = "eu-west-1"
+  }
 }
 
 provider "aws" {
@@ -15,6 +21,7 @@ provider "aws" {
 
 resource "aws_db_instance" "taskit_db" {
   allocated_storage = 5
+  db_name = var.DB_NAME
   engine = "postgres"
   engine_version = "15.2"
   identifier = "taskit-db"
