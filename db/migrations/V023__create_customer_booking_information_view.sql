@@ -15,7 +15,7 @@ SELECT
 	bookings.booking_date AS booking_date,
 	calculate_booking_price(booking_id) AS booking_cost
 FROM
-	bookings
+	taskit.bookings
 	INNER JOIN customers USING (customer_id)
 	INNER JOIN addresses USING (address_id)
 	INNER JOIN booking_workers USING (booking_id)
